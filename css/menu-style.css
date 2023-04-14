@@ -1,1 +1,194 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Bebas+Neue&display=swap');
+
+:root{
+    --titulo: 'Bebas Neue', cursive;
+    --tela: 'Alkatra', cursive;
+    --generico: sans-serif;
+    --cor-padrao: rgb(19, 19, 19);
+}
+
+/* Navbar */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: var(--cor-padrao);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    box-shadow: 0px 10px 10px var(--cor-padrao);
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+nav{
+    display: flex;
+    padding: 10px;
+}
+
+div#icons{
+    margin: 10px;
+    width: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+
+img#user{
+    border: 1px solid white ;
+}
+
+nav > h1{
+    font-family: var(--titulo);
+    color: #d31d1d;
+    padding: 5px;
+}
+
+/* Navbar */
+
+/* Telão inicial */
+
+section#telao{
+    width: 100%;
+    height: 80vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+section#telao > img{
+    position: absolute;
+    top: 15%;
+    right: 12.5%;
+    max-width: 100%;
+    height: 80%;
+
+}
+
+div#titulo{
+    position: relative;
+    z-index: 2;
+    margin: 10vh;
+}
+
+div#titulo > h1{
+    font-family: var(--tela);
+    font-weight: 400;
+    color: rgb(252, 252, 252);
+    font-size: 5em;
+    text-shadow: 1px 0px 0px rgb(245, 245, 245);
+}
+
+div#titulo > a{
+    text-decoration: none;
+    color: white;
+    background-color: #d31d1d;
+    padding: 1.5vw;
+}
+ 
+div#titulo > #play{
+    background-color: #d31d1d;
+}
+
+div#titulo > #list{
+    background-color: #3d3d3d;
+}
+
+div#titulo > #play::before{
+    content: url(../midia/image/botao-play-ponta-de-seta.png);
+    filter: invert(1);
+}
+
+div#titulo > #list::before{
+    content: url(../midia/image/botap-list.png);
+}
+
+section#telao::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 56%, rgba(0,0,0,0) 71%, rgba(0,0,0,1) 87%);
+  }
+
+.botao{
+    margin-left: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.041);
+}
+
+#dislike{
+    transform: rotate(180deg);
+}
+
+.botao#like:hover{
+    background-color: rgb(0, 56, 56);
+}
+
+.botao#dislike:hover{
+    background-color: rgb(56, 0, 0);
+}
+
+/* Telão inicial */
+
+/* conteúdo */
+
+#conteudo{
+    background-color: var(--cor-padrao);
+}
+
+#conteudo article > h2{
+    font-family: var(--generico);
+    color: white;
+}
+
+
+/* conteúdo */
+
+/* responsivo */
+@media screen and (max-width: 400px){
+
+    li{
+        display: none;
+    }
+
+    div#titulo > h1{
+        font-size: 15vw;
+    }
+
+    div#titulo > a{
+        text-decoration: none;
+        color: white;
+    
+        background-color: #d31d1d;
+    
+        padding: 2vw;
+    }
+
+    .botao{
+        display: none;
+    }
+
+    section#telao > img{
+        right: 0;
+    }
+
+    section#telao::after{
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 49%, rgba(0,0,0,1) 100%);
+
+    }
+}
+
+/* responsivo */

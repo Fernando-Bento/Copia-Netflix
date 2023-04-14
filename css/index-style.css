@@ -38,7 +38,7 @@ figure{
 
 img:hover{
     transform: scale(1.1);
-    transition: 1s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 
 #conf{
