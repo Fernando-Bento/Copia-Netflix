@@ -26,6 +26,7 @@ main{
     display: inherit;
     justify-content: center;
     width: 100%;
+    flex-flow: row wrap;
 }
 
 figure{
@@ -50,11 +51,7 @@ img:hover{
 /* VV Responsividade VV */
 
 @media screen and (max-width: 700px) {
-    #usuarios {
-      flex-direction: column;
-      align-items: center;
-    }
-
+    
     figure{
         align-items: center;
     }
