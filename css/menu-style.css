@@ -77,6 +77,17 @@ section#telao > img{
 
 }
 
+section#telao::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 56%, rgba(0,0,0,0) 71%, rgba(0,0,0,1) 87%);
+  }
+
 div#titulo{
     position: relative;
     z-index: 2;
@@ -118,17 +129,6 @@ div#titulo > #play::before{
 div#titulo > #list::before{
     content: url(../midia/image/botap-list.png);
 }
-
-section#telao::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 56%, rgba(0,0,0,0) 71%, rgba(0,0,0,1) 87%);
-  }
 
 .botao{
     margin-left: 20px;
@@ -237,7 +237,7 @@ footer p{
 /* botao voltar */
 
 /* responsivo */
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
 
     li{
         display: none;
@@ -258,6 +258,10 @@ footer p{
 
     .botao{
         display: none;
+    }
+
+    div#titulo > a{
+        padding: 5vw;
     }
 
     section#telao > img{
