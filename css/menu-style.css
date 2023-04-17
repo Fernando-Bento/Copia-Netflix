@@ -166,6 +166,14 @@ section#telao::after {
     margin: 20px;
 }
 
+#lancamentos{
+    justify-content: left;
+}
+
+#lancamentos img{
+    border: 1px orange solid;
+}
+
 article{
     display: flex;
     flex-flow: row wrap;
